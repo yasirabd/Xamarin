@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SampleMobileAzure.BarangPage" Title="List Of Barang">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+" Clicked="MenuItem_OnClicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <ActivityIndicator  
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center" 
+                       IsVisible="False" 
+                       IsEnabled="True" 
+                       x:Name="syncIndicator"/>
+            <ListView x:Name="listViewBarang" ItemTapped="ListView_OnItemTapped" IsPullToRefreshEnabled="True" Refreshing="ListViewBarang_OnRefreshing">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+                                <Label FontSize="16" Text="{Binding KodeBarang}" />
+                                <Label FontSize="16" Text="{Binding NamaBarang}" />
+                                <Label FontSize="16" Text="{Binding Stok}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage> 

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Contoh Modal" xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Modul4.ModalPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="First Page" FontSize="40" />
+            <Button Text="Go to Second Page Modally" Clicked="Navigate" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage> 

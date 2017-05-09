@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Modul5.ShowEmployee">
+    <StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row ="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Employee Details" />
+            <Label Grid.Row ="1" Grid.Column="1" Text="Name" />
+            <Label Grid.Row="1" Grid.Column="2" Text ="{Binding EmpName}" />
+            <Label Grid.Row ="2" Grid.Column="1" Text="Designation" />
+            <Label Grid.Row="2" Grid.Column="2" Text ="{Binding Designation}"/>
+            <Label Grid.Row ="3" Grid.Column="1" Text="Department" />
+            <Label Grid.Row="3" Grid.Column="2" Text ="{Binding Department}"/>
+            <Label Grid.Row ="4" Grid.Column="1" Text="Qualification" />
+            <Label Grid.Row="4" Grid.Column="2" Text ="{Binding Qualification}" />
+            <Button Grid.Row ="5" Grid.Column="1" Text="Edit Details" Clicked="OnEditClicked" />
+            <Button Grid.Row="5" Grid.Column="2" Text="Delete" Clicked="OnDeleteClicked" />
+        </Grid>
+    </StackLayout>
+</ContentPage>

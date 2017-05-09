@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Modul2.KalkulatorPage">
+    <StackLayout Orientation="Vertical">
+        <Label Text="Masukan Bilangan 1 :" FontSize="Medium" />
+        <Entry x:Name="entryBil1" Placeholder="masukan bilangan 1" Keyboard="Numeric" />
+        <Label Text="Masukan Bilangan 2 :" FontSize="Medium" />
+        <Entry x:Name="entryBil2" Placeholder="masukan bilangan 2" Keyboard="Numeric" />
+        <Label Text="Hasil :" FontSize="Medium" />
+        <Entry x:Name="entryHasil" IsEnabled="false" />
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="btnTambah" Text="Tambah" />
+            <Button x:Name="btnKurang" Text="Kurang" />
+            <Button x:Name="btnKali" Text="Kali" />
+            <Button x:Name="btnBagi" Text="Bagi" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage> 

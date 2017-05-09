@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Modul5.ManageEmployee">
+    <StackLayout>
+        <ListView x:Name="lstData" HasUnevenRows="false" Header="Header Value" Footer="Footer" ItemSelected="OnSelection" >
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" BackgroundColor="Blue" Padding="5,5,5,5">
+                        <Label Text="Name" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                        <Label Text="Designation" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                        <Label Text="Department" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="5,5,5,5">
+                            <Label Text="{Binding EmpName}" FontSize="Medium" />
+                            <Label Text="{Binding Designation}" FontSize="Medium" />
+                            <Label Text="{Binding Department}" FontSize="Medium" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.FooterTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" Padding="5,5,5,5">
+                        <Button Text="Add New Employee" Clicked="OnNewClicked" />
+                    </StackLayout>
+                </DataTemplate>
+            </ListView.FooterTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

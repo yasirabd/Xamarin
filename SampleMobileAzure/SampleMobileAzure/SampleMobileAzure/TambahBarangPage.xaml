@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SampleMobileAzure.TambahBarangPage" Title="Tambah Barang">
+    <ContentPage.Content>
+        <Grid x:Name="gvBarang">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Label Text="Kode Barang :" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
+            <Entry x:Name="txtKodeBarang" Text="{Binding KodeBarang}" Placeholder="masukan kode barang" Grid.Row="0" Grid.Column="1" />
+
+            <Label Text="Nama Barang :" HorizontalTextAlignment="End" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" />
+            <Entry x:Name="txtNamaBarang" Text="{Binding NamaBarang}" Placeholder="masukan nama barang" Grid.Row="1" Grid.Column="1" />
+
+            <Label Text="Stok :" HorizontalTextAlignment="End" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" />
+            <Entry x:Name="txtStok" Text="{Binding Stok, StringFormat='{0:N}'}" Keyboard="Numeric" Placeholder="masukan stok" Grid.Row="2" Grid.Column="1" />
+
+            <Label Text="Harga Beli :" HorizontalTextAlignment="End" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center" />
+            <Entry x:Name="txtHargaBeli" Text="{Binding HargaBeli, StringFormat='{0:N}'}" Keyboard="Numeric" Placeholder="masukan harga beli" Grid.Row="3" Grid.Column="1" />
+
+            <Label Text="Harga Jual :" HorizontalTextAlignment="End" Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" />
+            <Entry x:Name="txtHargaJual" Text="{Binding HargaJual, StringFormat='{0:N}'}" Keyboard="Numeric" Placeholder="masukan harga jual" Grid.Row="4" Grid.Column="1" />
+
+            <StackLayout Orientation="Horizontal" Grid.Row="5" Grid.ColumnSpan="2">
+                <Button x:Name="btnSave" HorizontalOptions="EndAndExpand" Text="Save" WidthRequest="150" Clicked="BtnSave_OnClicked" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage> 
