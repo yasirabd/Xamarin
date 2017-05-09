@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tugas3Dicoding.ManageStorage"
+             Title="Financial">
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <ListView x:Name="lstData" HasUnevenRows="false" Header="Header Value" Footer="Footer" ItemSelected="OnSelection" >
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" BackgroundColor="Blue" Padding="5,5,5,5" >
+                        <Label Text="Transaksi" FontSize="Medium" FontAttributes="Bold" TextColor="White" HorizontalOptions="StartAndExpand"/>
+                        <Label Text="Date" FontSize="Medium" FontAttributes="Bold" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                        <Label Text="Amount" FontSize="Medium" FontAttributes="Bold" TextColor="White" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="5,5,5,5">
+                            <Label Text="{Binding jenisTransaksi}" FontSize="Medium" HorizontalOptions="StartAndExpand" />
+                            <Label Text="{Binding dateTransaksi}" FontSize="Medium" HorizontalOptions="CenterAndExpand"/>
+                            <Label Text="{Binding amountTransaksi}" FontSize="Medium" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.FooterTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" Padding="5,5,5,5" HorizontalOptions="Center">
+                        <Button Text="Add New Transaction" Clicked="OnNewClicked" />
+                    </StackLayout>
+                </DataTemplate>
+            </ListView.FooterTemplate>
+        </ListView>
+        <StackLayout VerticalOptions="End" Orientation="Horizontal" BackgroundColor="Blue" HeightRequest="75" >
+            <Label Text="Total" FontSize="Large" FontAttributes="Bold" TextColor="White" HorizontalOptions="StartAndExpand"/>
+            <Label x:Name="TotalAmount" FontSize="Large" FontAttributes="Bold" TextColor="White" HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

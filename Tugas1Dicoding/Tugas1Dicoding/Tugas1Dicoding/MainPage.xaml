@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Tugas1Dicoding"
+             x:Class="Tugas1Dicoding.MainPage">
+
+    <StackLayout Orientation="Vertical">
+        <Label Text="Tinggi Badan :" FontSize="Large" FontAttributes="Bold" />
+        <Entry x:Name="tinggiBadan" Placeholder="masukkan nilai di sini (satuan cm)" Keyboard="Numeric" />
+        <Label Text="Berat Badan :" FontSize="Large" FontAttributes="Bold" />
+        <Entry x:Name="beratBadan" Placeholder="masukkan nilai di sini (satuan kg)" Keyboard="Numeric" />
+        <StackLayout Orientation="Vertical">
+            <Button x:Name="btnLaki" Text="HITUNG BERAT BADAN IDEAL LAKI-LAKI" />
+            <Button x:Name="btnPerempuan" Text="HITUNG BERAT BADAN IDEAL PEREMPUAN" />
+        </StackLayout>
+        <Label Text="Berat Badan Ideal(Brocha) :" FontSize="Large" FontAttributes="Bold" />
+        <Entry x:Name="brocha" IsEnabled="false" />
+        <Label Text="Nilai BMI :" FontSize="Large" FontAttributes="Bold" />
+        <Entry x:Name="nilaiBMI" IsEnabled="false" />
+        <Label Text="Kesimpulan :" FontSize="Large" FontAttributes="Bold" />
+        <Entry x:Name="kesimpulan" IsEnabled="false" />
+
+    </StackLayout>
+
+</ContentPage>

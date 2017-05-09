@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tugas3Dicoding.EditStorage"
+             Title="Edit Transaction">
+    <StackLayout>
+        <TableView Intent="Settings" BackgroundColor="White">
+            <TableRoot>
+                <TableSection Title="Edit Storage">
+                    <EntryCell x:Name="txtJenisTransaksi" Label="Transaction" Text ="{Binding jenisTransaksi}" Keyboard="Text" />
+                    <EntryCell x:Name="txtAmountTransaksi" Label="Amount" Text ="{Binding amountTransaksi}" Keyboard="Numeric" />
+                    <EntryCell x:Name="txtDateTransaksi" Label="Date" Text ="{Binding dateTransaksi}" Keyboard="Text" IsEnabled="False" />
+                    <EntryCell x:Name="txtInfoTransaksi" Label="info" Text ="{Binding infoTransaksi}" Keyboard="Text" />
+                    <ViewCell>
+                        <ContentView Padding="0,0">
+                            <ContentView.Padding>
+                                <OnPlatform x:TypeArguments="Thickness" iOS="10,0" WinPhone="0,15,0,0" />
+                            </ContentView.Padding>
+                            <ContentView.Content>
+                                <Button BackgroundColor="#fd6d6d" Text="Save" TextColor="White" Clicked="OnSaveClicked" />
+                            </ContentView.Content>
+                        </ContentView>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </StackLayout>
+</ContentPage>

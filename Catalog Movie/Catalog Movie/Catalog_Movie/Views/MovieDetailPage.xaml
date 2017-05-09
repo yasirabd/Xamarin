@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Catalog_Movie.Views.MovieDetailPage"
+             Title="Detail">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="15">
+                <Label x:Name="titleMovie" Text="Title" FontSize="30" />
+                <Image x:Name="imageMovie" WidthRequest="100" HeightRequest="100" />
+                <Label x:Name="labelInfo" Text="Info:" FontAttributes="Bold" FontSize="20"/>
+                <Label x:Name="descriptionMovie" Text="Description" FontSize="20" />
+                <Button x:Name="btnBack" Text="Back" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
